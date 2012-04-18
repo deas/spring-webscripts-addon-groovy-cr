@@ -8,7 +8,7 @@
 	<!-- Register the Groovy script processor -->
 	<bean id="webframework.registrar.groovyscriptprocessor" class="org.springframework.extensions.surf.ScriptProcessorRegistrar" init-method="init">
 		<property name="factory">
-			<bean class="org.springframework.extensions.webscripts.processor.GroovyScriptProcessorFactory" />
+			<bean class="org.springframework.extensions.webscripts.processor.DebuggableGroovyScriptProcessorFactory" />
 		</property>
 	</bean>
 	
