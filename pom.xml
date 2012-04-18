@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.extensions.surf</groupId>
+		<artifactId>spring-surf-parent</artifactId>
+		<version>1.0.0</version><!--1.1.0-SNAPSHOT-->
+		<!--relativePath>../../pom.xml</relativePath-->
+	</parent>
+	<artifactId>spring-webscripts-addon-groovy-cr</artifactId>
+	<name>Spring Web Scripts - Contentreich Groovy Addon</name>
+	<description>Spring Web Scripts - Contentreich Groovy Addon</description>
+	<url>spring-webscripts-addons/${project.artifactId}</url>
+	<packaging>jar</packaging>
+	
+	<dependencies>	
+
+		<!-- Web Scripts -->
+		<dependency>
+			<groupId>org.springframework.extensions.surf</groupId>
+			<artifactId>spring-webscripts</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- Include Web Scripts Test Dependencies during test -->
+		<dependency>
+			<groupId>org.springframework.extensions.surf</groupId>
+			<artifactId>spring-webscripts</artifactId>
+			<version>${project.version}</version>
+			<classifier>tests</classifier>
+			<scope>test</scope>
+		</dependency>
+	    
+	    <dependency>
+	    	<groupId>org.codehaus.groovy</groupId>
+	    	<artifactId>groovy-all</artifactId>
+	    	<version>1.6.7</version>
+	    </dependency>
+	    	    
+	</dependencies>
+        <repositories>
+                <!-- Alfresco Community Maven Repositories -->
+                <!--repository>
+            <id>alfresco-public-snapshots</id>
+            <url>http://maven.alfresco.com/nexus/content/groups/public-snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+                </repository-->
+        <repository>
+            <id>alfresco-public-releases</id>
+            <url>http://maven.alfresco.com/nexus/content/groups/public</url>
+		</repository>
+        </repositories>
+
+</project>
